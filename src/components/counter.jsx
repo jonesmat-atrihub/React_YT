@@ -1,7 +1,22 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevProps);
+    console.log(prevState);
+
+    if (prevProps.counter.value !== this.props.counter.value) {
+      //Ajax call for new data
+    }
+  }
+
+  componentWillUnmount() {
+    console.log("Counter unmount");
+  }
+
   render() {
+    console.log("Counter rendered");
+
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatvalue()}</span>
