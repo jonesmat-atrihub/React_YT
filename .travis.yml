@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+script:
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: Ra2tksfdZikMMgEXDJkYUsPdc03m6ak+mdreOiFzYGA1QpbvjB2WfoVtzIo2zJ5009oA8NuN3QYN4Q/TDf+rOcT2/6bVIwHNBVoNQQ68RL87GD44pVbxAKtAwCEBYQry46lqfEyUljRgY3CjQM0LwEBzxvQhO4tBCuVXEXmcr64xbXbrv7pnMEd4U7sI9zJjN9cyuLZnoUjsThiakq6ID4YlSxNUQayRKG4ugOsKUIclGbLcqVnG8ZXLmCeacjsW2useADF+VP8ZWQsKfuw/Sv7UYTGB/Ck775fcqttGIgCe141NedcdOyuJkvWcjPqjuy1bcCoI6+fW9buZ1hdjdty+aHkmdLGNl3MLSU0fxwYZY3K/DX1nU29EGv9gFmem7iFk+tG1C2DFTEoF3v1EOO1dHFQzbNavSDkLDOl1icU2fRPW8StF3JZvy3qdCx5sMqnuo/Ly2LerSUr1qgksk4MZvpUd6yCT4wo5sUH6aoFu/bZp06zu0UinQFOvBAbNS54gHt99Sg0mdAJZLcZCX6ORfFJW27vql+JXSF81d/ZcBXI53EQGsf+nQX9iKgeQ+u0vJ+T+267K1j4WEn00r4gZDrUnPSDfYBZ2EDeo+KEzVthewM9bTEMoMJPYUip7Mms7wT5oGfWX99Q4GisMMkMi+39Lm438nQAzbU5CVtY=
+  app: shielded-coast-81308
+  on: master-prod
